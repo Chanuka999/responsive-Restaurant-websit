@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 import Navbar from "./Components/Navbar";
+import Header from "./Components/Header";
+import Products from "./Components/Products";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
 import { css } from "@emotion/react";
 import { PropagateLoader } from "react-spinners";
 
@@ -16,7 +20,7 @@ export default function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 2000);
   }, []);
   return (
     <div className="App">
@@ -30,6 +34,10 @@ export default function App() {
       ) : (
         <>
           <Navbar />
+          <Header />
+          <Products />
+          <About />
+          <Contact />
         </>
       )}
     </div>
