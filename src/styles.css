@@ -5,7 +5,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #ffffff;
+  background-color: #616360;
   font-family: "Bebas Neue", "Lato", sans-serif;
 }
 * {
@@ -50,7 +50,7 @@ nav {
 }
 nav.active {
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157);
-  background-color: #ffffff;
+  background-color: #2aa11a;
 }
 nav ul {
   display: flex;
