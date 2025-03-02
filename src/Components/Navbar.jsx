@@ -16,7 +16,7 @@ function Navbar() {
   window.addEventListener("scroll", changeBackground);
   return (
     <nav className={nav ? "nav action" : "nav"}>
-      <Link to="main" className="logo">
+      <Link to="main" className="logo" smooth={true} duration={2000}>
         <img src={logo} alt="" />
       </Link>
       <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -25,16 +25,24 @@ function Navbar() {
       </label>
       <ul className="menu">
         <li>
-          <Link to="#">Header</Link>
+          <Link to="main" smooth={true} duration={2000}>
+            Header
+          </Link>
         </li>
         <li>
-          <Link to="#">Product</Link>
+          <Link to="products" smooth={true} duration={2000}>
+            Product
+          </Link>
         </li>
         <li>
-          <Link to="#">About</Link>
+          <Link to="about" smooth={true} duration={2000}>
+            About
+          </Link>
         </li>
         <li>
-          <Link to="#">Contact</Link>
+          <Link to="contact" smooth={true} duration={2000}>
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>
