@@ -1,20 +1,21 @@
-import react, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import Navbar from "./Components/Navbar";
-//import { css } from "@emotion/react";
+import { css } from "@emotion/react";
 import { PropagateLoader } from "react-spinners";
 
 export default function App() {
-  const [loading, setLoding] = useState(false);
-  const override = CSS`
-  display:block;
-  border-color:red;
-  margin-top:20%;`;
+  const [loading, setLoading] = useState(false);
+  const override = css`
+    display: block;
+    border-color: red;
+    margin-top: 20%;
+  `;
 
   useEffect(() => {
-    setLoding(true);
+    setLoading(true);
     setTimeout(() => {
-      setLoding(false);
+      setLoading(false);
     }, 5000);
   }, []);
   return (
@@ -22,8 +23,8 @@ export default function App() {
       {loading ? (
         <PropagateLoader
           color={"#3d2514"}
-          loading={"loading"}
-          css={"override"}
+          loading={loading}
+          cssOverride={override}
           size={40}
         />
       ) : (
